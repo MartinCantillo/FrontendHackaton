@@ -1,1 +1,34 @@
-<p>products works!</p>
+<div class="Producto">
+    <form class="custom-form" >
+      <h1>Productos</h1>
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre"
+        required
+        [(ngModel)]="formData.nombre"
+      />
+      <input
+        type="text"
+        name="codigo"
+        placeholder="Codigo"
+        required
+        [(ngModel)]="formData.codigo"
+      />
+      <input
+        type="text"
+        name="precio"
+        placeholder="Precio"
+        required
+        [(ngModel)]="formData.precio"
+      />
+      <input
+        type="text"
+        name="categoria"
+        placeholder="Categoria"
+        required
+        [(ngModel)]="formData.categoria"
+      />
+      <button type="submit">Registrar</button>
+    </form>
+  </div>

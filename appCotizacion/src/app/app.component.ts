@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, routes } from './app-routing.module';
 
 import { ClientsComponent } from '../app/components/clients/clients.component';
+import { ProductsComponent } from './components/products/products.component';
 
 
 const appRoutes: Routes = [
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule],
-  providers: [ClientsComponent, routes],
+  providers: [ClientsComponent, ProductsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
