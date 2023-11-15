@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../../app-routing.module';
 import { ClientsComponent } from '../clients/clients.component';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -19,10 +20,26 @@ import { ClientsComponent } from '../clients/clients.component';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
-  formData: any = {
-    nombre: '',
-    codigo: '',
-    precio: '',
-    categoria: '',
-  };
+
+    nombre: string = '';
+    codigo: number= 0;
+    precio: number = 0;
+    categoria: string = '';
+
+  products: Product = new Product();
+
+  addProduct() {
+    this.products.nombre = this.nombre;
+    this.products.codigo = this.codigo;
+    this.products.precio = this.direccion;
+    this.products.categoria = this.estado;
+    //this.clients.idp = this.registerClient.generatePrimaryKey();
+    
+    this.registerProduct.SaveClient(this.products).subscribe({
+      next: (res) => alert('Registro con exito'),
+      error: (error) => {
+        console.log(error);
+      },
+    });
+
 }

@@ -9,6 +9,10 @@ import { AppRoutingModule, routes } from './app-routing.module';
 
 import { ClientsComponent } from '../app/components/clients/clients.component';
 import { ProductsComponent } from './components/products/products.component';
+import { AsesorComponent } from './components/asesor/asesor.component';
+import { OrdenComponent } from './components/orden/orden.component';
+import { PaqueteComponent } from './components/paquete/paquete.component';
+import { CotizacionComponent } from './components/cotizacion/cotizacion.component';
 
 
 const appRoutes: Routes = [
@@ -18,7 +22,7 @@ const appRoutes: Routes = [
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule],
-  providers: [ClientsComponent, ProductsComponent],
+  providers: [ClientsComponent, ProductsComponent, AsesorComponent, OrdenComponent, PaqueteComponent, CotizacionComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

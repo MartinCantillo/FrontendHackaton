@@ -36,8 +36,8 @@ export class ClientsComponent {
 
   addClient() {
     this.clients.cedula = this.cedula;
-    this.clients.direccion = this.direccion;
     this.clients.nombre = this.nombre;
+    this.clients.direccion = this.direccion;
     this.clients.estado = this.estado;
     //this.clients.idp = this.registerClient.generatePrimaryKey();
     
