@@ -1,0 +1,36 @@
+<template> class="registro-cliente">
+    <form class="custom-form" (ngSubmit)="addClient()">
+      <h1>Cliente</h1>
+      <input
+        type="text"
+        name="cedula"
+        placeholder="Cedula/NIT"
+        required
+        [(ngModel)]="cedula"
+      />
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre o razón social"
+        required
+        [(ngModel)]="nombre"
+      />
+      <input
+        type="text"
+        name="direccion"
+        placeholder="Direccion"
+        required
+        [(ngModel)]="direccion"
+      />
+      <input
+        type="text"
+        name="estado"
+        placeholder="Estado"
+        required
+        [(ngModel)]="estado"
+      />
+      <button type="submit">Registrar</button>
+      <br />
+      <button type="submit" (click)="getClient()">Ver</button>
+    </form>
+</template>
