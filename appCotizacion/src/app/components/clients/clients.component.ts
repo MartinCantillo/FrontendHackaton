@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { Client } from '../../models/client.model';
 import { resgisterClientService } from '../../services/register-client.service';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../../app-routing.module';
 
 @Component({
   selector: 'app-clients',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule],
   templateUrl: './clients.component.html',
   styleUrl: './clients.component.css'
   
@@ -48,7 +50,4 @@ export class ClientsComponent {
 
   }
   
-  getClient() {
-    this.router.navigate(['/getClient']);
-  }
 }
