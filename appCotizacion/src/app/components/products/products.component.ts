@@ -28,18 +28,6 @@ export class ProductsComponent {
 
   products: Product = new Product();
 
-  addProduct() {
-    this.products.nombre = this.nombre;
-    this.products.codigo = this.codigo;
-    this.products.precio = this.direccion;
-    this.products.categoria = this.estado;
-    //this.clients.idp = this.registerClient.generatePrimaryKey();
-    
-    this.registerProduct.SaveClient(this.products).subscribe({
-      next: (res) => alert('Registro con exito'),
-      error: (error) => {
-        console.log(error);
-      },
-    });
+ 
 
 }
